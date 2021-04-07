@@ -12,7 +12,9 @@ export const BackgroundWrapper = styled.div`
 
 export const LoginWrapper = styled.div`
     display: flex;
+    position: fixed;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 115px;   
+    padding-left: 115px; 
+    margin-top: 100px;  
 `

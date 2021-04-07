@@ -1,4 +1,5 @@
 import * as Styled from "./styled";
+import ErrorBubble from "../ErrorBubble";
 
 const LoginFields = () => {
   return (
@@ -20,7 +21,9 @@ const LoginFields = () => {
 
       </Styled.ButtonFieldWrapper>
 
-    </Styled.FormWrapper>
+      <ErrorBubble message="Email e/ou senha incorretos."/>
+
+    </Styled.FormWrapper>    
   );
 };
 
