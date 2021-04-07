@@ -1,12 +1,12 @@
 import styled from "styled-components";
-import background from "../../assets/Background.png";
+import LoginBackground from "../../assets/LoginBackground.png";
 
 export const BackgroundWrapper = styled.div`
     display: flex;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-image: url(${background});
+    background-image: url(${LoginBackground});
     background-size: cover;
 `
 

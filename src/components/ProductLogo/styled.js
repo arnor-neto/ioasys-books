@@ -14,7 +14,7 @@ export const Image = styled.img`
 export const Text = styled.p`
     margin: 0;
     padding: 0;
-    color: ${props => (props.color == 'white') ? '#ffffff' : '#333333'};
+    color: ${props => (props.color === 'white') ? '#ffffff' : '#333333'};
     font-size: 28px;
     font-weight: 300;
 `
