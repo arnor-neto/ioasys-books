@@ -16,4 +16,5 @@ export const Text = styled.p`
     padding: 0;
     color: ${props => (props.color == 'white') ? '#ffffff' : '#333333'};
     font-size: 28px;
+    font-weight: 300;
 `
