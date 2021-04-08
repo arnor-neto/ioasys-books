@@ -1,12 +1,16 @@
 import * as Styled from "./styled";
 import { Context } from "../../GlobalContext";
 import { useContext } from "react";
+import { useHistory } from "react-router-dom";
 
 const UserMenu = ({ userName = "Desconhecido" }) => {
-  const [setUser] = useContext(Context);
+  const [user, setUser] = useContext(Context);
 
+  let history = useHistory();
   const handleLogout = () => {
+    console.log(user.name + " has logged off!")
     setUser({ name: null, auth: null });
+    history.push("/");
   };
 
   return (
@@ -15,7 +19,7 @@ const UserMenu = ({ userName = "Desconhecido" }) => {
         Bem vindo, <Styled.UsernameText>{userName}!</Styled.UsernameText>
       </Styled.WelcomeText>
 
-      <Styled.LogoutButton to="/" onClick={handleLogout} />
+      <Styled.LogoutButton onClick={handleLogout} />
     </Styled.MenuWrapper>
   );
 };

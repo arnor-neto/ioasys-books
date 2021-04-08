@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import LogoutIcon from "../../assets/LogoutIcon.png";
-import { Link } from "react-router-dom";
 
 export const MenuWrapper = styled.div`
     display: flex;
@@ -24,7 +23,7 @@ export const UsernameText = styled.strong`
     color: #333333;
 `
 
-export const LogoutButton = styled(Link)`
+export const LogoutButton = styled.div`
     cursor: pointer;
     border: 1px solid rgba(51, 51, 51, 0.2);
     outline: none;
