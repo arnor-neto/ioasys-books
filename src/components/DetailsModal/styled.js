@@ -125,3 +125,14 @@ export const QuoteIcon = styled.img`
   top: 2px;
   margin-right: 4px;
 `;
+
+export const LoadingPanel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  img{
+    width: 120px;
+    height: 120px;
+  }
+`

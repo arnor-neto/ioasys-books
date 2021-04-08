@@ -8,7 +8,7 @@ import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 
 const Books = () => {
-  const [user, setUser] = useContext(Context);
+  const [user] = useContext(Context);
   const [books, setBooks] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -19,6 +19,7 @@ const Books = () => {
     if (currentPage === 1) {
       setFirstPage(false);
     } else if (currentPage === 41) {
+      console.log(totalPages - 1)
       setLastPage(true);
     }
     if (currentPage < totalPages) {
@@ -49,14 +50,14 @@ const Books = () => {
       )
       .then((response) => {
         setBooks(response.data.data);
-        setTotalPages(response.data.totalPages);
+        setTotalPages(Math.ceil(response.data.totalPages));
         setCurrentPage(response.data.page);
         console.log(response.data);
       })
       .catch((error) => {
         console.log("Erro na requisição");
       });
-  }, [currentPage]);
+  }, [currentPage, user.auth]);
 
   return (
     <Styled.BackgroundWrapper>

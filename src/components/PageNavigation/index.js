@@ -4,7 +4,7 @@ const PageNavigation = ({currentPage, totalPages, firstPage, lastPage, handleNex
     return(
         <Styled.Wrapper>
             <Styled.Text>
-                Página <Styled.Number>{currentPage}</Styled.Number> de <Styled.Number>{Math.ceil(totalPages)}</Styled.Number>
+                Página <Styled.Number>{currentPage}</Styled.Number> de <Styled.Number>{totalPages}</Styled.Number>
             </Styled.Text>
             <Styled.PrevButton firstPage={firstPage} onClick={handlePrev}/>
             <Styled.NextButton lastPage={lastPage} onClick={handleNext}/>
