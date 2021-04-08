@@ -14,31 +14,37 @@ const Books = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [firstPage, setFirstPage] = useState(true);
   const [lastPage, setLastPage] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const handleNextPage = () => {
-    if (currentPage === 1) {
-      setFirstPage(false);
-    } else if (currentPage === 41) {
-      console.log(totalPages - 1)
-      setLastPage(true);
-    }
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
+    if (!loading) {
+      if (currentPage === 1) {
+        setFirstPage(false);
+      } else if (currentPage === 41) {
+        console.log(totalPages - 1);
+        setLastPage(true);
+      }
+      if (currentPage < totalPages) {
+        setCurrentPage(currentPage + 1);
+      }
     }
   };
 
   const handlePrevPage = () => {
-    if (currentPage === 2) {
-      setFirstPage(true);
-    } else if (currentPage === 42) {
-      setLastPage(false);
-    }
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
+    if (!loading) {
+      if (currentPage === 2) {
+        setFirstPage(true);
+      } else if (currentPage === 42) {
+        setLastPage(false);
+      }
+      if (currentPage > 1) {
+        setCurrentPage(currentPage - 1);
+      }
     }
   };
 
   useEffect(() => {
+    setLoading(true);
     axios
       .get(
         `https://books.ioasys.com.br/api/v1/books?page=${currentPage}&amount=12`,
@@ -53,6 +59,7 @@ const Books = () => {
         setTotalPages(Math.ceil(response.data.totalPages));
         setCurrentPage(response.data.page);
         console.log(response.data);
+        setLoading(false);
       })
       .catch((error) => {
         console.log("Erro na requisição");
