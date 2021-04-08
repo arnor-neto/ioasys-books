@@ -70,7 +70,7 @@ const Books = () => {
           console.log("Erro na requisição");
         });
     }
-  }, [currentPage, user.auth]);
+  }, [currentPage, user.auth, history]);
 
   return (
     <Styled.BackgroundWrapper>
