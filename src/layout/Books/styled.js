@@ -12,6 +12,17 @@ export const BackgroundWrapper = styled.div`
   background-blend-mode: darken;
   background-position: fixed;
   overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+    padding-left: 10px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 8px;
+    background: #e7cfe4;
+    border-radius: 30px;
+  }
 `;
 
 export const Header = styled.div`
@@ -36,4 +47,4 @@ export const NavigationWrapper = styled.div`
   justify-content: flex-end;
   margin-top: 16px;
   margin-bottom: 42px;
-`
+`;

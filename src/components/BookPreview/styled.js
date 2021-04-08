@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import CloseIcon from "../../assets/CloseIcon.png";
 
 export const Wrapper = styled.div`
   display: flex;
@@ -35,6 +36,17 @@ export const TextWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow-y: scroll;
+  &::-webkit-scrollbar {
+    width: 4px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 30px;
+  }
+  &::-webkit-scrollbar-thumb {
+    width: 4px;
+    background: #e7cfe4;
+    border-radius: 30px;
+  }
 `;
 
 export const TitlesWrapper = styled.div`
@@ -54,7 +66,7 @@ export const TitleText = styled.h1`
   color: #333333;
 `;
 
-export const AuthorText = styled.h2`
+export const AuthorText = styled.strong`
   margin: 0;
   font-weight: 400;
   font-size: 12px;
@@ -66,4 +78,23 @@ export const DetailText = styled.p`
   font-weight: 400;
   font-size: 12px;
   color: #999999;
+`;
+
+export const CloseButton = styled.button`
+  position: absolute;
+  right: 16px;
+  top: 16px;
+
+  cursor: pointer;
+  border: 1px solid rgba(51, 51, 51, 0.2);
+  outline: none;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+
+  background: #ffffff;
+  background-image: url(${CloseIcon});
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 10;
 `;
