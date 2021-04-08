@@ -5,6 +5,7 @@ export const ErrorBubbleWrapper = styled.div`
   flex-direction: column;
   transition: 0.5s;
   opacity: ${props => props.error? 1 : 0};
+  cursor: default;
 `
 
 export const ArrowContainer = styled.div`
