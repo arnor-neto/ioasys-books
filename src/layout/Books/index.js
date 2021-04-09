@@ -73,6 +73,7 @@ const Books = () => {
           setLoading(false);
         })
         .catch((error) => {
+          setUser({ name: "null", auth: "null" });
           history.push("/");
         });
     }
