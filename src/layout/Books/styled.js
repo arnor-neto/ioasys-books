@@ -11,6 +11,7 @@ export const BackgroundWrapper = styled.div`
   background-image: url(${DashboardBackground1}), url(${DashboardBackground2});
   background-blend-mode: darken;
   background-position: fixed;
+  background-size: cover;
   overflow-y: scroll;
   &::-webkit-scrollbar {
     width: 8px;

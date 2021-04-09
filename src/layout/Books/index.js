@@ -16,7 +16,7 @@ import axios from "axios";
 
 const Books = () => {
   let history = useHistory();
-  const [user] = useContext(Context);
+  const [user, setUser] = useContext(Context);
   const [books, setBooks] = useState([]);
   const [totalPages, setTotalPages] = useState(1);
   const [currentPage, setCurrentPage] = useState(1);
@@ -77,7 +77,7 @@ const Books = () => {
           history.push("/");
         });
     }
-  }, [currentPage, user.auth, history]);
+  }, [currentPage, user.auth, setUser, history]);
 
   return (
     <Styled.BackgroundWrapper>
