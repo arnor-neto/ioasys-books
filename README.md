@@ -19,7 +19,7 @@ Para executar a aplicação no modo de desenvolvimento é necessário clonar o r
 
 ### `yarn start`
 
-Adicionalmente, uma versão desse repositório está hospedada no Netlify. Para visualizar, acesso o endereço:
+Adicionalmente, uma versão desse repositório está hospedada no Netlify. Para visualizar, acesse o endereço:
 
 ### [`ioasysbooks.netlify.app`](ioasysbooks.netlify.app)
 
