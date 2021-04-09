@@ -21,7 +21,7 @@ Para executar a aplicação no modo de desenvolvimento é necessário clonar o r
 
 Adicionalmente, uma versão deste repositório está hospedada no Netlify. Para visualizar, acesse o endereço:
 
-### [`ioasysbooks.netlify.app`](ioasysbooks.netlify.app)
+### [`ioasysbooks.netlify.app`](https://ioasysbooks.netlify.app)
 
 # ✨ Considerações pessoais
 
