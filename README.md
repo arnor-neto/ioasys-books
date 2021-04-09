@@ -19,10 +19,10 @@ Para executar a aplicação no modo de desenvolvimento é necessário clonar o r
 
 ### `yarn start`
 
-Adicionalmente, uma versão desse repositório está hospedada no Netlify. Para visualizar, acesse o endereço:
+Adicionalmente, uma versão deste repositório está hospedada no Netlify. Para visualizar, acesse o endereço:
 
 ### [`ioasysbooks.netlify.app`](ioasysbooks.netlify.app)
 
 # ✨ Considerações pessoais
 
-Sou muito agradecido por toda a dedicação e atenção da equipe do Ioasys Camp, realizar o desafio foi emocionante e cansativo mas é extremamente satisfatório ver o resultado de tanto esforço. Obrigado por me darem a chance de fazer algo que me deixou orgulhoso com minha capacidade, galerinha da Ioasys. 💖
+Sou muito agradecido por toda a dedicação e atenção da equipe do Camp, realizar o desafio foi emocionante e cansativo mas é extremamente satisfatório ver o resultado de tanto esforço. Obrigado por me darem a chance de fazer algo que me deixou orgulhoso com minha capacidade, galerinha da Ioasys. 💖
