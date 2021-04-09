@@ -67,7 +67,7 @@ const Books = () => {
           setLoading(false);
         })
         .catch((error) => {
-          console.log("Erro na requisição");
+          history.push("/");
         });
     }
   }, [currentPage, user.auth, history]);

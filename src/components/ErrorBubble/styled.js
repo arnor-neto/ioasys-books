@@ -1,15 +1,17 @@
 import styled from "styled-components";
 
 export const ErrorBubbleWrapper = styled.div`
-  display:flex;
+  display: flex;
   flex-direction: column;
   transition: 0.5s;
-  opacity: ${props => props.error? 1 : 0};
+  opacity: ${(props) => (props.error ? 1 : 0)};
   cursor: default;
-`
+  @media (max-width: 600px) {
+    width: 90%;
+  }
+`;
 
 export const ArrowContainer = styled.div`
-
   position: relative;
 
   display: flex;
@@ -49,4 +51,8 @@ export const Bubble = styled.p`
   background: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(2px);
   border-radius: 4px;
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;

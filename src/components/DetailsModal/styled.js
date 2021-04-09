@@ -10,7 +10,11 @@ export const BackgroundWrapper = styled.div`
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.4);
+  overflow-y: scroll;
   backdrop-filter: blur(2px);
+  &::-webkit-scrollbar {
+    width: 0;
+  }
 `;
 
 export const ContentWrapper = styled.div`
@@ -20,6 +24,12 @@ export const ContentWrapper = styled.div`
   box-shadow: 0px 16px 80px rgba(0, 0, 0, 0.32);
   border-radius: 4px;
   background: #ffffff;
+  @media (max-width: 600px) {
+    width: 92%;
+    height: auto;
+    align-self: flex-start;
+    margin: 64px 0;
+  }
 `;
 
 export const Content = styled.div`
@@ -27,6 +37,11 @@ export const Content = styled.div`
   width: 100%;
   justify-content: space-between;
   padding: 6% 5%;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    padding: 8% 7%;
+    align-items: center;
+  }
 `;
 
 export const Cover = styled.img`
@@ -34,6 +49,9 @@ export const Cover = styled.img`
   max-height: 513px;
   object-fit: cover;
   box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.3);
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 export const TextWrapper = styled.div`
@@ -42,22 +60,34 @@ export const TextWrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   padding: 4px 0;
+  @media (max-width: 600px) {
+    width: 96%;
+  }
 `;
 
 export const TitlesWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  @media (max-width: 600px) {
+    margin-top: 24px;
+  }
 `;
 
 export const InfoWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 600px) {
+    margin-top: 32px;
+  }
 `;
 
 export const ReviewWrapper = styled.div`
   display: flex;
   flex-direction: column;
+  @media (max-width: 600px) {
+    margin-top: 32px;
+  }
 `;
 
 export const TitleText = styled.h1`
@@ -108,6 +138,7 @@ export const ReviewText = styled.p`
   line-height: 20px;
   color: #999999;
   overflow-y: auto;
+  padding-right: 4px;
   &::-webkit-scrollbar {
     width: 4px;
     background: rgba(0, 0, 0, 0);
@@ -117,6 +148,9 @@ export const ReviewText = styled.p`
     width: 4px;
     background: #e7cfe4;
     border-radius: 30px;
+  }
+  @media (max-width: 600px) {
+    max-height: none;
   }
 `;
 

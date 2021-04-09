@@ -16,6 +16,11 @@ export const Wrapper = styled.div`
   border-radius: 4px;
 
   cursor: pointer;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    max-width: 320px;
+  }
 `;
 
 export const Content = styled.div`

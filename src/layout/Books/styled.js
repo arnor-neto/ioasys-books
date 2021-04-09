@@ -23,6 +23,12 @@ export const BackgroundWrapper = styled.div`
     background: #e7cfe4;
     border-radius: 30px;
   }
+  @media (max-width: 600px) {
+    background-position: center;
+    &::-webkit-scrollbar {
+    width: 0px;
+    }
+  }
 `;
 
 export const Header = styled.div`
@@ -31,6 +37,9 @@ export const Header = styled.div`
   align-items: center;
   padding-top: 42px;
   width: 83%;
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 export const Content = styled.div`
@@ -39,6 +48,10 @@ export const Content = styled.div`
   flex-wrap: wrap;
   margin-top: 24px;
   width: 83%;
+  @media (max-width: 600px) {
+    width: 90%;
+    justify-content: center;
+  }
 `;
 
 export const NavigationWrapper = styled.div`
@@ -47,4 +60,8 @@ export const NavigationWrapper = styled.div`
   justify-content: flex-end;
   margin-top: 16px;
   margin-bottom: 42px;
+  @media (max-width: 600px) {
+    width: 90%;
+    justify-content: center;
+  }
 `;

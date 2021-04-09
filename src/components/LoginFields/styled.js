@@ -5,6 +5,10 @@ export const FormWrapper = styled.form`
     flex-direction: column;
     justify-content: space-between;
     margin-top: 50px;
+
+    @media(max-width: 600px){
+        width: 100%;
+    }
 `
 
 export const FieldWrapper = styled.div`
@@ -15,6 +19,10 @@ export const FieldWrapper = styled.div`
     background: rgba(0, 0, 0, 0.32);
     backdrop-filter: blur(2px);
     border-radius: 4px;
+
+    @media(max-width: 600px){
+        width: 100%;
+    }
 `
 
 export const ButtonFieldWrapper = styled.div`
@@ -27,6 +35,10 @@ export const ButtonFieldWrapper = styled.div`
     backdrop-filter: blur(2px);
     border-radius: 4px;
     margin-top: 16px;
+
+    @media(max-width: 600px){
+        width: 100%;
+    }
 `
 
 export const PasswordWrapper = styled.div`
@@ -50,7 +62,7 @@ export const FieldInput = styled.input`
     color: white;
     padding: 4px 0 0 16px;
     font-size: 15px;
-    font-weight: 300
+    font-weight: 300;
 `
 
 export const LoginButton = styled.button`
