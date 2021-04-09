@@ -2,6 +2,11 @@ import { useState } from "react";
 import DetailsModal from "../DetailsModal";
 import * as Styled from "./styled";
 
+/**
+ * Simple component for book listing. Recieves all data
+ * from a book and renders a small card with information.
+ */
+
 const BookPreview = ({
   bookID,
   coverURL,

@@ -6,6 +6,11 @@ import { Context } from "../../GlobalContext";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
+/**
+ * Reads and authenticates login info.
+ * On form submit, autheticates the given login credentials via API call.
+ */
+
 const LoginFields = () => {
   let history = useHistory();
   const [error, setError] = useState(false);
@@ -13,10 +18,10 @@ const LoginFields = () => {
   const { register, handleSubmit } = useForm();
 
   useEffect(() => {
-    if(user.auth !== "null"){
-      history.push("/books")
+    if (user.auth !== "null") {
+      history.push("/books");
     }
-  }, [user, history])
+  }, [user, history]);
 
   const onSubmit = (data) => {
     axios
@@ -25,7 +30,10 @@ const LoginFields = () => {
         password: data.password,
       })
       .then((response) => {
-        setUser({name: response.data.name, auth: response.headers.authorization})
+        setUser({
+          name: response.data.name,
+          auth: response.headers.authorization,
+        });
         console.log(user);
         setError(false);
         history.push("/books");

@@ -5,6 +5,11 @@ import { Context } from "../../GlobalContext";
 import axios from "axios";
 import loadingGIF from "../../assets/loadingGIF.gif";
 
+/**
+ * Complete component for displaying book information. Recieves a
+ * book ID and renders a modal card with information from the API.
+ */
+
 const DetailsModal = ({ bookID }) => {
   const [user] = useContext(Context);
   const [book, setBook] = useState([]);
@@ -105,7 +110,7 @@ const DetailsModal = ({ bookID }) => {
           )}
           {loading && (
             <Styled.LoadingPanel>
-              <img src={loadingGIF} alt="loading..."/>
+              <img src={loadingGIF} alt="loading..." />
             </Styled.LoadingPanel>
           )}
         </Styled.Content>

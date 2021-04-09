@@ -8,6 +8,12 @@ import { useEffect, useState, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 
+/** 
+ * Book listing screen.
+ * If already logged in, the user will start on this screen
+ * and will be redirected to it on acessing root address.
+ */
+
 const Books = () => {
   let history = useHistory();
   const [user] = useContext(Context);

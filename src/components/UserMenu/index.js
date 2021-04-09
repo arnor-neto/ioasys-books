@@ -3,6 +3,10 @@ import { Context } from "../../GlobalContext";
 import { useContext } from "react";
 import { useHistory } from "react-router-dom";
 
+/** 
+ * Displays user name and logout actions.
+ */
+
 const UserMenu = ({ userName = "Desconhecido" }) => {
   const [user, setUser] = useContext(Context);
 
