@@ -1,7 +1,7 @@
 import * as Styled from "./styled";
 import ErrorBubble from "../ErrorBubble";
 import { useForm } from "react-hook-form";
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import { Context } from "../../GlobalContext";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
@@ -11,6 +11,12 @@ const LoginFields = () => {
   const [error, setError] = useState(false);
   const [user, setUser] = useContext(Context);
   const { register, handleSubmit } = useForm();
+
+  useEffect(() => {
+    if(user.auth !== "null"){
+      history.push("/books")
+    }
+  }, [user, history])
 
   const onSubmit = (data) => {
     axios

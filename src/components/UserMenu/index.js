@@ -9,7 +9,7 @@ const UserMenu = ({ userName = "Desconhecido" }) => {
   let history = useHistory();
   const handleLogout = () => {
     console.log(user.name + " has logged off!")
-    setUser({ name: null, auth: null });
+    setUser({ name: "null", auth: "null" });
     history.push("/");
   };
 

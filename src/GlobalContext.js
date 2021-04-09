@@ -1,8 +1,8 @@
 import { createContext, useEffect, useState } from "react";
 
 const InitialState = {
-  name: sessionStorage.getItem("userName") || null,
-  auth: sessionStorage.getItem("userAuth") || null,
+  name: localStorage.getItem("userName") || "null",
+  auth: localStorage.getItem("userAuth") || "null",
 };
 
 export const Context = createContext();
@@ -11,8 +11,8 @@ export const GlobalContext = ({ children }) => {
   const [user, setUser] = useState(InitialState);
 
   useEffect(() => {
-    sessionStorage.setItem("userName", user.name);
-    sessionStorage.setItem("userAuth", user.auth);
+    localStorage.setItem("userName", user.name);
+    localStorage.setItem("userAuth", user.auth);
   }, [user]);
 
   return (
